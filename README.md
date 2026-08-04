@@ -4,13 +4,9 @@ A modern, highly interactive, and premium-quality developer portfolio website bu
 
 ---
 
-## 🚀 Live Demo & Repositories
+## 🚀 Live Demo
 
-- **Live URL**: [https://react-photo-gallery-six.vercel.app/](https://react-photo-gallery-six.vercel.app/)
-- **Projects Highlighted**:
-  - **Cartyra Landing Page**: [GitHub Repository](https://github.com/Pratick-Script/Cartyra-E-commerce-Website) | [Live Demo Link](https://cartyra-e-commerce-website-ivqk.vercel.app/)
-  - **React Photo Gallery**: [GitHub Repository](https://github.com/Pratick-Script/react-photo-gallery) | [Live Demo Link](https://react-photo-gallery-six.vercel.app/)
-
+- **Live URL**: [https://pratick-portfolio.vercel.app/](https://pratick-portfolio.vercel.app/)
 ---
 
 ## ✨ Features & Visual Interactions
