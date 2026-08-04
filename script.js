@@ -156,14 +156,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Coding symbols trail on mouse movement
     window.addEventListener('mousemove', (event) => {
-      mouse.x = event.x;
-      mouse.y = event.y;
-      
-      // Emit 1 coding symbol per mousemove tick to prevent cluttering
+      mouse.x = event.clientX;
+      mouse.y = event.clientY;
       symbolsArray.push(new CodeSymbol(mouse.x, mouse.y));
     });
 
+    // Mobile touch support to emit symbols and push particles
+    window.addEventListener('touchmove', (event) => {
+      if (event.touches.length > 0) {
+        mouse.x = event.touches[0].clientX;
+        mouse.y = event.touches[0].clientY;
+        symbolsArray.push(new CodeSymbol(mouse.x, mouse.y));
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchstart', (event) => {
+      if (event.touches.length > 0) {
+        mouse.x = event.touches[0].clientX;
+        mouse.y = event.touches[0].clientY;
+        symbolsArray.push(new CodeSymbol(mouse.x, mouse.y));
+      }
+    }, { passive: true });
+
     window.addEventListener('mouseout', () => {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    window.addEventListener('touchend', () => {
       mouse.x = null;
       mouse.y = null;
     });
@@ -233,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
         this.size = Math.random() * 7 + 12; // Font size 12px to 19px
         this.speedX = (Math.random() * 0.4) - 0.2; // very gentle horizontal drift
         this.speedY = (Math.random() * -0.5) - 0.15; // very slow upward float
-        
+
         // Randomly color symbols with one of the primary colors
         const colors = [
           'rgba(56, 189, 248, ', // cyan
@@ -244,23 +264,23 @@ document.addEventListener('DOMContentLoaded', () => {
         this.opacity = 1.0;
         this.rotation = Math.random() * Math.PI * 0.15 - Math.PI * 0.075; // very gentle random rotation
       }
-      
+
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
         ctx.translate(this.x, this.y);
         ctx.rotate(this.rotation);
-        
+
         // Draw glow effect for text symbols
         ctx.shadowColor = `${this.colorPrefix}0.6)`;
         ctx.shadowBlur = 6;
-        
+
         ctx.fillStyle = `${this.colorPrefix}1.0)`;
         ctx.font = `bold ${this.size}px 'Courier New', monospace`;
         ctx.fillText(this.text, 0, 0);
         ctx.restore();
       }
-      
+
       update() {
         this.x += this.speedX;
         this.y += this.speedY;
