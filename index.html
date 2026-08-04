@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratick Majhi | Personal Portfolio</title>
+
+  <!-- Favicon Logo on browser tab -->
+  <link class="tab-favicon" rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2225%22 fill=%22%232563EB%22/><text x=%2250%%22 y=%2255%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Poppins, sans-serif%22 font-weight=%22bold%22 font-size=%2250%22 fill=%22%23FFFFFF%22>PM</text></svg>">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Personal portfolio of Pratick Majhi - B.Tech IT Student and Web Developer. Building modern, interactive, and responsive web applications.">
+  <meta name="keywords"
+    content="Pratick Majhi, Web Developer, Frontend Developer, B.Tech IT, MAKAUT, Government College of Engineering and Leather Technology, Portfolio">
+  <meta name="author" content="Pratick Majhi">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Floating Particles Background Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ==========================================
+     HEADER / NAVIGATION
+     ========================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        Pratick<span>.dev</span>
+      </a>
+
+      <!-- Hamburger Icon for Mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav class="nav-links" id="nav-links">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <!-- Hero Details -->
+        <div class="hero-content reveal-left">
+          <div class="hero-greeting">
+            <i class="fa-solid fa-hand-wave"></i> Hello, I'm
+          </div>
+          <h1 class="hero-name">Pratick Majhi</h1>
+          <div class="hero-typing">
+            <span id="typing-text"></span><span class="typing-cursor"></span>
+          </div>
+          <p class="hero-desc">
+            Building responsive, user-friendly, and modern web experiences. Currently pursuing IT Engineering and
+            specializing in frontend web application design and implementation.
+          </p>
+
+          <!-- Call to Action Buttons -->
+          <div class="hero-btns">
+            <a href="assets/Pratick_Resume.pdf" class="btn btn-primary" download="Pratick_Majhi_Resume.pdf"
+              id="download-resume">
+              <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-solid fa-envelope"></i> Contact Me
+            </a>
+          </div>
+
+          <!-- Social Link Icons -->
+          <div class="hero-socials">
+            <a href="https://github.com/Pratick-Script" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/pratick-majhi-586262214/" target="_blank" rel="noopener noreferrer"
+              class="social-link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:pratickmajhi02@gmail.com" class="social-link" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Interactive Profile Image -->
+        <div class="hero-image-wrapper reveal-right">
+          <div class="hero-img-container">
+            <img src="assets/profile.jpeg" alt="Pratick Majhi Portrait">
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to About Me Section">
+        <span>Scroll Down</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ==========================================
+       ABOUT ME SECTION
+       ========================================== -->
+    <section id="about" class="section">
+      <div class="glow-spot" style="top: 20%; left: -10%; background-color: var(--primary);"></div>
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Get To Know Me</span>
+          <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Glass Card Highlight -->
+          <div class="about-left-card glass reveal-left">
+            <blockquote class="about-quote">
+              "Clean code always looks like it was written by someone who cares."
+              <span class="about-quote-author">— Michael Feathers</span>
+            </blockquote>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              I strive to construct digital interfaces that run fast, feel intuitive, and look polished down to the last
+              pixel.
+            </p>
+            <div class="about-features-grid">
+              <div class="about-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Responsive Design</span>
+              </div>
+              <div class="about-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Clean Architecture</span>
+              </div>
+              <div class="about-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Interactive Elements</span>
+              </div>
+              <div class="about-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Continuous Learning</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Detailed Info and Bio -->
+          <div class="about-right reveal-right">
+            <p class="about-desc-text">
+              I am Pratick Majhi, a Bachelor of Technology (B.Tech) student in Information Technology at Government
+              College of Engineering & Leather Technology. I am passionate about frontend development and enjoy building
+              responsive, interactive, and user-friendly web applications. I have experience with HTML, CSS, JavaScript,
+              and modern web technologies. I continuously improve my skills by building real-world projects, learning
+              new technologies, and writing clean, maintainable code.
+            </p>
+
+            <div class="about-info-list">
+              <div class="info-item">
+                <span class="info-label">Current Role</span>
+                <span class="info-val">Web Developer Intern</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Location</span>
+                <span class="info-val">West Bengal, India</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Institution</span>
+                <span class="info-val">GCELT, MAKAUT</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Degree</span>
+                <span class="info-val">B.Tech in IT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       EDUCATION SECTION
+       ========================================== -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Academic Path</span>
+          <h2 class="section-title">Education</h2>
+        </div>
+
+        <div class="timeline-wrapper">
+          <!-- Timeline Item 1 (B.Tech) -->
+          <div class="timeline-item timeline-item-left reveal-left">
+            <div class="timeline-dot"></div>
+            <article class="timeline-card glass glass-hover">
+              <div class="timeline-year">
+                <i class="fa-solid fa-calendar-days"></i> 2022 – Present
+              </div>
+              <h3 class="timeline-title">Bachelor of Technology (B.Tech)</h3>
+              <p class="timeline-subtitle">Information Technology</p>
+              <div class="timeline-details">
+                <span><i class="fa-solid fa-graduation-cap"></i> College: Government College of Engineering & Leather
+                  Technology</span>
+                <span><i class="fa-solid fa-building-columns"></i> University: MAKAUT</span>
+                <span><i class="fa-solid fa-award"></i> Current CGPA: 7.44 / 10.0</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Timeline Item 2 (Class XII) -->
+          <div class="timeline-item timeline-item-right reveal-right">
+            <div class="timeline-dot"></div>
+            <article class="timeline-card glass glass-hover">
+              <div class="timeline-year">
+                <i class="fa-solid fa-calendar-days"></i> Passed in 2021
+              </div>
+              <h3 class="timeline-title">Higher Secondary (Class XII)</h3>
+              <p class="timeline-subtitle">Dainhat High School (H.S)</p>
+              <div class="timeline-details">
+                <span><i class="fa-solid fa-school"></i> Board: West Bengal Council of Higher Secondary Education
+                  (WBCHSE)</span>
+                <span><i class="fa-solid fa-chart-simple"></i> Score: 78.0%</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Timeline Item 3 (Class X) -->
+          <div class="timeline-item timeline-item-left reveal-left">
+            <div class="timeline-dot"></div>
+            <article class="timeline-card glass glass-hover">
+              <div class="timeline-year">
+                <i class="fa-solid fa-calendar-days"></i> Passed in 2019
+              </div>
+              <h3 class="timeline-title">Secondary (Class X)</h3>
+              <p class="timeline-subtitle">Makhaltore Madhyamik Vidyalaya</p>
+              <div class="timeline-details">
+                <span><i class="fa-solid fa-school-flag"></i> Board: West Bengal Board of Secondary Education
+                  (WBBSE)</span>
+                <span><i class="fa-solid fa-chart-simple"></i> Score: 72.0%</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       SKILLS SECTION
+       ========================================== */ -->
+    <section id="skills" class="section">
+      <div class="glow-spot" style="bottom: 10%; right: -5%; background-color: var(--secondary);"></div>
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">What I am Good At</span>
+          <h2 class="section-title">My Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skills Card -->
+          <div class="skills-card span-3 glass glass-hover reveal reveal-zoom">
+            <div class="skills-card-header">
+              <div class="skills-card-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3 class="skills-card-title">Skills</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-chip">
+                <i class="fa-solid fa-code" style="color: #38BDF8;"></i>
+                <span>C++</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-brands fa-python" style="color: #3776AB;"></i>
+                <span>Python</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-brands fa-html5" style="color: #E34F26;"></i>
+                <span>HTML5</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i>
+                <span>CSS5</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-brands fa-square-js" style="color: #F7DF1E;"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-brands fa-react" style="color: #61DAFB;"></i>
+                <span>React</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-brands fa-node-js" style="color: #339933;"></i>
+                <span>Node.js</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-solid fa-server" style="color: #94A3B8;"></i>
+                <span>Express.js</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-solid fa-database" style="color: #00BCF2;"></i>
+                <span>SQL</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-solid fa-leaf" style="color: #47A248;"></i>
+                <span>MongoDB</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools Card -->
+          <div class="skills-card span-1 glass glass-hover reveal reveal-zoom delay-100">
+            <div class="skills-card-header">
+              <div class="skills-card-icon">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </div>
+              <h3 class="skills-card-title">Tools</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-chip">
+                <i class="fa-brands fa-git-alt" style="color: #F05032;"></i>
+                <span>Git</span>
+              </div>
+              <div class="skill-chip">
+                <i class="fa-brands fa-github" style="color: #FFFFFF;"></i>
+                <span>GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       PROJECTS SECTION
+       ========================================== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">My Portfolio Works</span>
+          <h2 class="section-title">Featured Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Cartyra -->
+          <article class="project-card glass glass-hover reveal-left">
+            <div class="project-img-wrapper">
+              <img src="assets/cartyra.png" alt="Cartyra Landing Page Preview">
+              <div class="project-overlay">
+                <div class="project-tags">
+                  <span class="project-tag">HTML5</span>
+                  <span class="project-tag">CSS3</span>
+                  <span class="project-tag">JavaScript</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="badge"><i class="fa-solid fa-store"></i> Landing Page</span>
+              <h3 class="project-title">Cartyra</h3>
+              <p class="project-desc">
+                A modern and responsive e-commerce landing page built using HTML, CSS, and JavaScript. The project
+                focuses on delivering a clean shopping experience with an attractive UI, responsive layout, interactive
+                elements, and smooth navigation.
+              </p>
+              <div class="project-features">
+                <span class="project-feature"><i class="fa-solid fa-circle-arrow-right"></i> Responsive Design</span>
+                <span class="project-feature"><i class="fa-solid fa-circle-arrow-right"></i> Product Showcase</span>
+                <span class="project-feature"><i class="fa-solid fa-circle-arrow-right"></i> Interactive UI & Clean
+                  Navigation</span>
+                <span class="project-feature"><i class="fa-solid fa-circle-arrow-right"></i> Mobile Friendly
+                  Layout</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Pratick-Script/Cartyra-E-commerce-Website" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-secondary" aria-label="View Github repository for Cartyra">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://cartyra-e-commerce-website-ivqk.vercel.app/" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-primary" aria-label="View Live Demo of Cartyra">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: React Photo Gallery -->
+          <article class="project-card glass glass-hover reveal-right">
+            <div class="project-img-wrapper">
+              <img src="assets/react-photo-gallery.png" alt="React Photo Gallery Preview">
+              <div class="project-overlay">
+                <div class="project-tags">
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">Tailwind Css</span>
+                  <span class="project-tag">Axios</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="badge"><i class="fa-solid fa-images"></i> Web App</span>
+              <h3 class="project-title">React Photo Gallery</h3>
+              <p class="project-desc">
+                A responsive photo gallery application that fetches images from an API and displays them using
+                pagination, loading animations, and an elegant responsive interface.
+              </p>
+              <div class="project-features">
+                <span class="project-feature"><i class="fa-solid fa-circle-arrow-right"></i> REST API Integration</span>
+                <span class="project-feature"><i class="fa-solid fa-circle-arrow-right"></i> Pagination Controls</span>
+                <span class="project-feature"><i class="fa-solid fa-circle-arrow-right"></i> Loading Animations</span>
+                <span class="project-feature"><i class="fa-solid fa-circle-arrow-right"></i> Optimized Dynamic Image
+                  Display</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Pratick-Script/react-photo-gallery" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-secondary"
+                  aria-label="View Github repository for React Photo Gallery">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://react-photo-gallery-six.vercel.app/" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-primary" aria-label="View Live Demo of React Photo Gallery">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       EXPERIENCE SECTION
+       ========================================== -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Professional Background</span>
+          <h2 class="section-title">Work Experience</h2>
+        </div>
+
+        <div class="experience-container reveal">
+          <article class="experience-card glass glass-hover">
+            <div class="experience-header">
+              <div class="experience-title-block">
+                <h3 class="experience-role">Web Developer Intern</h3>
+                <span class="experience-company">
+                  <i class="fa-solid fa-briefcase"></i> CodeOrbit Tech
+                </span>
+              </div>
+              <div class="experience-duration">
+                August 2026 – Present
+              </div>
+            </div>
+
+            <div class="experience-bullets">
+              <div class="experience-bullet">
+                <i class="fa-solid fa-circle-chevron-right"></i>
+                <p>Developing responsive, fluid web interfaces tailored for multi-screen layouts.</p>
+              </div>
+              <div class="experience-bullet">
+                <i class="fa-solid fa-circle-chevron-right"></i>
+                <p>Building highly reusable UI components maximizing clean styling tokens.</p>
+              </div>
+              <div class="experience-bullet">
+                <i class="fa-solid fa-circle-chevron-right"></i>
+                <p>Working with HTML, CSS, JavaScript, and modern web technologies to refine styling systems.</p>
+              </div>
+              <div class="experience-bullet">
+                <i class="fa-solid fa-circle-chevron-right"></i>
+                <p>Collaborating with the development team to improve user experience and optimize overall website
+                  performance.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       CONTACT SECTION
+       ========================================== -->
+    <section id="contact" class="section">
+      <div class="glow-spot" style="top: 10%; left: 80%; background-color: var(--accent);"></div>
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Get In Touch</span>
+          <h2 class="section-title">Contact Me</h2>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Channels Info -->
+          <div class="contact-info reveal-left">
+            <div class="contact-card glass glass-hover">
+              <div class="contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Location</span>
+                <span class="contact-value">West Bengal, India</span>
+              </div>
+            </div>
+
+            <div class="contact-card glass glass-hover">
+              <div class="contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">pratickmajhi02@gmail.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Feedback Form -->
+          <!-- We use FormSubmit.co for free direct email delivery. 
+               The first time you submit this form, FormSubmit will send you a one-time 
+               activation link to pratickmajhi02@gmail.com to activate your form. -->
+          <form class="contact-form glass reveal-right" id="contact-form"
+            action="https://formsubmit.co/ajax/pratickmajhi02@gmail.com" method="POST" novalidate>
+            <!-- Form Feedback Status -->
+            <div class="form-status" id="form-status"></div>
+
+            <div class="form-group">
+              <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+              <label for="name" class="form-label">Full Name</label>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
+              <label for="email" class="form-label">Email Address</label>
+            </div>
+
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" class="form-input" placeholder=" " required>
+              <label for="subject" class="form-label">Subject</label>
+            </div>
+
+            <div class="form-group">
+              <textarea id="message" name="message" class="form-input" placeholder=" " required></textarea>
+              <label for="message" class="form-label">Your Message</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="btn-submit">
+              <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+     FOOTER
+     ========================================== -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-info">
+        <p class="footer-copy">&copy; 2026 Pratick Majhi. All rights reserved.</p>
+        <p class="footer-made">Made with <i class="fa-solid fa-heart"></i> using HTML, CSS & JavaScript.</p>
+      </div>
+
+      <!-- Footer Social Icons -->
+      <div class="hero-socials" style="margin-top: 0;">
+        <a href="https://github.com/Pratick-Script" target="_blank" rel="noopener noreferrer" class="social-link"
+          aria-label="GitHub Link Footer">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/pratick-majhi-586262214/" target="_blank" rel="noopener noreferrer"
+          class="social-link" aria-label="LinkedIn Link Footer">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:pratickmajhi02@gmail.com" class="social-link" aria-label="Email Link Footer">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+
+</html>
