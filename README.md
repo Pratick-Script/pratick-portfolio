@@ -44,7 +44,7 @@ A modern, highly interactive, and premium-quality developer portfolio website bu
 └── /assets             # High-quality preview images, portrait, and PDF resume
       ├── profile.jpeg  # Professional portrait photo
       ├── cartyra.png   # E-commerce website preview mockup
-      ├── react-photo-gallery.png # Gallery application preview mockup
+      ├── portfolio.png # Portfolio website preview mockup
       └── Pratick_Resume.pdf      # Downloadable PDF Resume
 ```
 

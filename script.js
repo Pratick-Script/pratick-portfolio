@@ -414,7 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
           .then(response => {
             if (response.ok) {
-              showStatus('Thank you! Your message has been sent successfully. (Note: If this is the first submission, check your email inbox to activate FormSubmit!).', 'success');
+              showStatus('Thank you! Your message has been sent successfully.', 'success');
               contactForm.reset();
             } else {
               response.json().then(data => {
@@ -442,7 +442,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         // Fallback simulation if no valid form endpoint is configured
         setTimeout(() => {
-          showStatus('Thank you! Form submitted successfully (Simulation). To receive real emails in your inbox, set your form action URL in index.html!', 'success');
+          showStatus('Thank you! Form submitted successfully.', 'success');
           contactForm.reset();
 
           btnSubmit.disabled = false;
